@@ -89,5 +89,9 @@ addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener('submit', calculateCalories);
 
 function clearForm(){
-    let inputContainers = document.querySelectorAll('.input-container');
+    let inputContainers = Array.from(document.querySelectorAll('.input-container'));
+    for(const container of inputContainers){
+        container.innerHTML = "";
+    }
+
 }
